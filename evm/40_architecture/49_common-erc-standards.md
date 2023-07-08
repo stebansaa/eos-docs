@@ -4,10 +4,10 @@ contributors:
   - { name: Esteban Saá, github: stebansaa }
 ---
 
-In the EOSEVM ecosystem, several widely adopted ERC (Ethereum Request for Comments) standards exist. These standards provide guidelines and specifications for implementing various functionalities and use cases on the EOSEVM network. Here are four commonly used ERC standards: ERC-20, ERC-721, ERC-777, and ERC-1155.
+In the EOS EVM ecosystem, several widely adopted ERC (Ethereum Request for Comments) standards exist. These standards provide guidelines and specifications for implementing various functionalities and use cases on the EOS EVM network. Here are four commonly used ERC standards: ERC-20, ERC-721, ERC-777, and ERC-1155.
 
 ### ERC-20
-ERC-20 is a standard interface for fungible tokens on the EOSEVM network. Fungible tokens are interchangeable and have identical values. ERC-20 tokens have methods to transfer tokens, check balances, and approve token spending on behalf of an address.
+ERC-20 is a standard interface for fungible tokens on the EOS EVM network. Fungible tokens are interchangeable and have identical values. ERC-20 tokens have methods to transfer tokens, check balances, and approve token spending on behalf of an address.
 
 #### Example ERC-20 Contract
 Here's an example of a basic ERC-20 token contract written in Solidity:
@@ -28,7 +28,7 @@ contract GLDToken is ERC20 {
 
 
 ### ERC-721
-ERC-721 is a standard for non-fungible tokens (NFTs) on the EOSEVM network. NFTs are unique and indivisible tokens that represent ownership of a specific item or asset. Each NFT has a distinct identifier, and they can be used for digital collectibles, unique assets, and more.
+ERC-721 is a standard for non-fungible tokens (NFTs) on the EOS EVM network. NFTs are unique and indivisible tokens that represent ownership of a specific item or asset. Each NFT has a distinct identifier, and they can be used for digital collectibles, unique assets, and more.
 
 #### Example ERC-721 Contract
 Here's an example of a basic ERC-721 token contract using the OpenZeppelin library in Solidity:
@@ -63,4 +63,4 @@ ERC-777 is an improved fungible token standard that incorporates additional feat
 ERC-1155 is a multi-token standard that enables the creation of both fungible and non-fungible tokens within a single contract. This standard is particularly useful for projects that require the management of multiple types of tokens, such as gaming platforms or decentralized exchanges.
 
 ## Final thoughts
-These ERC standards provide a foundation for building various token-based applications and use cases on the EOSEVM network. It's important to note that while these standards originated on Ethereum, they can also be implemented and utilized within the EOSEVM ecosystem.
+These ERC standards provide a foundation for building various token-based applications and use cases on the EOS EVM network. It's important to note that while these standards originated on Ethereum, they can also be implemented and utilized within the EOS EVM ecosystem.

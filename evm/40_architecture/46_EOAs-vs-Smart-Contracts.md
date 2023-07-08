@@ -5,12 +5,12 @@ contributors:
 ---
   
 ### What are EOAs?
-EOA stands for Externally Owned Account. In the context of EOSEVM, an EOA is an account that represents an individual user or entity on the EOSEVM network. It is similar to the concept of an Ethereum account. EOAs have their own addresses, private keys, and balances.
+EOA stands for Externally Owned Account. In the context of EOS EVM, an EOA is an account that represents an individual user or entity on the EOS EVM network. It is similar to the concept of an Ethereum account. EOAs have their own addresses, private keys, and balances.
 
 ##### What can you do with an EOA?
-With an EOA, you can perform various actions on the EOSEVM network, including:
+With an EOA, you can perform various actions on the EOS EVM network, including:
 
-- Sending and receiving EOSEVM tokens or assets.
+- Sending and receiving EOS EVM tokens or assets.
 - Interacting with smart contracts by calling their functions.
 - Participating in transactions and signing them with your private key.
 - Managing your own account balance and transactions.
@@ -23,10 +23,10 @@ There are certain limitations to what you can do with an EOA:
 - They cannot create new smart contracts on their own.
 
 #### Wallets
-To interact with an EOA, users typically utilize wallets. Wallets provide a user-friendly interface for managing private keys, sending transactions, and interacting with the EOSEVM network. Wallets can be desktop applications, mobile apps, or web-based interfaces.
+To interact with an EOA, users typically utilize wallets. Wallets provide a user-friendly interface for managing private keys, sending transactions, and interacting with the EOS EVM network. Wallets can be desktop applications, mobile apps, or web-based interfaces.
 
 ### What are Smart Contracts?
-Smart contracts are self-executing contracts with predefined rules and conditions. They are autonomous pieces of code that reside on the blockchain and execute when triggered by specific transactions or events. Smart contracts on EOSEVM are typically written in Solidity or Vyper programming languages.
+Smart contracts are self-executing contracts with predefined rules and conditions. They are autonomous pieces of code that reside on the blockchain and execute when triggered by specific transactions or events. Smart contracts on EOS EVM are typically written in Solidity or Vyper programming languages.
 
 #### What can you do with a Smart Contract?
 Smart contracts enable various functionalities and applications, including:
@@ -45,7 +45,7 @@ Although powerful, there are limitations to what smart contracts can do:
 - Smart contracts cannot initiate transactions on their own; they need to be triggered by external accounts (EOAs).
 
 ### How are EOAs and Smart contracts different?
-EOAs and smart contracts are distinct entities on the EOSEVM network:
+EOAs and smart contracts are distinct entities on the EOS EVM network:
 
 - EOAs represent individual user accounts and hold balances, while smart contracts are pieces of code that can also hold balances, yet they reside on the blockchain and execute predefined logic.
 - EOAs can sign transactions and interact with smart contracts, but they cannot execute complex computations or store data on the blockchain directly.
