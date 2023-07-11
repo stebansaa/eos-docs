@@ -34,14 +34,14 @@ The Graph supports many networks such as Ethereum, EOSEVM, etc. This article wil
 }
 ```
 
-Compile
+## Compile
 Run the command npx graph-compiler --config custom-subgraph/configs/config.json --include node_modules/@openzeppelin/subgraphs/src/datasources --export-schema --export-subgraph.
-Create Subgraph
+### Create Subgraph
 Run the command graph create generated/sample --node http://127.0.0.1:8020.
-Deploy Subgraph
+### Deploy Subgraph
 Run the command graph deploy --ipfs http://localhost:5001 --node http://localhost:8020 generated/sample ./generated/sample.subgraph.yaml.
 Once complete, visit http://localhost:8000/subgraphs/name/generated/sample to access and interact with the deployed subgraph.
 
-Test a query
+## Test a query
 Use the Graph Explorer or a GraphQL client to send queries and test the functionality of the subgraph.
 Congratulations! You have successfully deployed TheGraph and built a test subgraph for EOSEVM.
