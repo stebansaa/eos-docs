@@ -1,5 +1,5 @@
 Introduction
-The Graph supports many networks such as Ethereum, xDAI, BSC etc. This article will explain how to build a subgraph with a custom network RPC.
+The Graph supports many networks such as Ethereum, EOSEVM etc. This article will explain how to deploy TheGraph and build a test subgraph for EOSEVM.
 
 
 Setup Local Node
@@ -10,7 +10,7 @@ Open docker-compose.yml located in:
 
 graph-node/docker/docker-compose.yml
 
-Replace http://host.docker.internal:8545 with your RPC url. The default connects to a local ethereum node.
+Replace http://host.docker.internal:8545 with https://api.evm.eosnetwork.com/ . The default connects to a local ethereum node.
 
 NOTE: Keep mainnet:
 
