@@ -1,0 +1,83 @@
+Introduction
+The Graph supports many networks such as Ethereum, xDAI, BSC etc. This article will explain how to build a subgraph with a custom network RPC.
+
+
+Setup Local Node
+Use Docker to run a local graph node and connect it to a blockchain via RPC.
+
+git clone https://github.com/graphprotocol/graph-node/
+Open docker-compose.yml located in:
+
+graph-node/docker/docker-compose.yml
+
+Replace http://host.docker.internal:8545 with your RPC url. The default connects to a local ethereum node.
+
+NOTE: Keep mainnet:
+
+
+Go to graph-node/docker and run
+
+./setup.sh
+
+docker-compose up
+The logs will show the current block head. You can compare it with what’s in the block explorer.
+
+
+Your subgraph is running locally and is connected to the correct blockchain. Next, is creating a contract to index.
+
+Deploy Contract to Index
+This example will use OpenZepplin’s ERC-1155 contract. There is a public function to mint
+
+// SPDX-License-Identifier: GPL-3.0 pragma solidity >0.8.0;
+import "@openzeppelin/contracts/token/ERC1155/ERC1155.sol";
+contract My1155 is ERC1155 {
+  constructor() ERC1155("") {
+    _mint(msg.sender, 0, 1, ""); // mint 1 on deploy
+  }
+  function mint() public {
+      _mint(msg.sender, 0, 1, "");
+  }
+}
+Deploy and get a contract address
+
+
+View the block explorer for contract address and block. The subgraph will index events from this contract address.
+
+
+Setup Subgraph using OpenZepplin
+This example will use OpenZepplin’s subgraph. This makes it easy to index contracts such as ERC-20, ERC-721 and ERC-1155.
+
+https://docs.openzeppelin.com/subgraphs/0.1.x/
+
+mkdir custom-subgraph
+cd custom-subgraph
+npm i @openzeppelin/subgraphs
+mkdir configs
+touch configs/config.json
+In config.json add and replace
+
+address : The deployed contract address
+startBlock : The deployed contract block
+NOTE: Keep mainnet
+
+{
+  "output": "generated/sample.",
+  "chain": "mainnet",
+  "datasources": [{ "address": "0xf248a9c50d0db54ea53b6ce0ca0e8d5861b908ed", "startBlock": 1218128, "module": ["erc1155", "ownable", "accesscontrol"] }]
+}
+Compile
+
+npx graph-compiler --config configs/config.json --include node_modules/@openzeppelin/subgraphs/src/datasources --export-schema --export-subgraph
+This should generate a graphql and yaml file.
+
+
+Create Subgraph
+
+graph create generated/sample --node http://127.0.0.1:8020
+Deploy Subgraph
+
+graph deploy --ipfs http://localhost:5001 --node http://localhost:8020 generated/sample ./generated/sample.subgraph.yaml
+Once complete, visit http://localhost:8000/subgraphs/name/generated/sample
+
+
+Test a query
