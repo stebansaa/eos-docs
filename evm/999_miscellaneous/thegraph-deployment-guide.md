@@ -11,8 +11,7 @@ The Graph supports many networks such as Ethereum, EOSEVM, etc. This article wil
 
 ## Deploy Contract to Index
 
-- Deploy an ERC-1155 contract using OpenZeppelin's implementation.
-- Deploy and note the contract address and block number.
+- Deploy an ERC-1155 contract using OpenZeppelin's implementation, note the contract address and block number.
 
 ## Setup Subgraph using OpenZeppelin
 
